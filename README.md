@@ -4,15 +4,15 @@ A deliberately vulnerable, single-user educational Node.js application for a RAG
 
 ## Start (Node.js 22+)
 
+Generate a DigitalOcean **Model Access Key** in the DigitalOcean Inference console, not an agent endpoint key. Both the chat and embedding provider settings are independent. 
+
 ```bash
 npm start
 ```
 
-Open http://127.0.0.1:3000. No npm packages or API keys are needed for default offline mode. `npm test` runs the automated API regression suite.
+Open http://127.0.0.1:3000. 
 
-Restart the application. Generate a DigitalOcean **Model Access Key** in the DigitalOcean Inference console, not an agent endpoint key. Both the chat and embedding provider settings are independent. 
-
-When remote inference is active, synthetic questions, document contents, external-source text may be sent to the selected providers. Never use real employee or sensitive data. Charges and model access depend on your account; no fallback silently masks a provider error.
+* When remote inference is active, synthetic questions, document contents, external-source text may be sent to the selected providers. Never use real employee or sensitive data. Charges and model access depend on your account; no fallback silently masks a provider error.
 
 ## Branding and references
 
@@ -38,6 +38,6 @@ hacking-rags/
   .env.example        Configuration sample
 ```
 
-Data sources use a title, owner, kind text header and a blank line before body. The server reloads local `.txt` files per query, chunks at 120 words with 20-word overlap, and caches embeddings in memory by content hash. The query is embedded and ranked by cosine similarity; top 3 chunks are retrieved. The chat API returns text, source, owner, chunk and score; these are not displayed in a separate UI panel. In lab 02 a toy reset action writes only a simulated event to a local `actions.log`. Labs intentionally expose evidence for educational inspection. For actual application security, enforce authorization independently of retrieved text and model claims; apply tenant/user ACLs before retrieval, separate authoritative from untrusted sources, scope tools, and restrict egress.
+Data sources use a title, owner, kind text header and a blank line before body. The server reloads local `.txt` files per query, chunks at 120 words with 20-word overlap, and caches embeddings in memory by content hash. The query is embedded and ranked by cosine similarity; top 3 chunks are retrieved. The chat API returns text, source, owner, chunk and score; these are not displayed in a separate UI panel. In lab 02 a toy reset action writes only a simulated event to a local `actions.log`. Labs intentionally expose evidence for educational inspection.
 
 Developed By [Maor Tal](https://www.linkedin.com/in/maor-tal-06a7ba2a/).
