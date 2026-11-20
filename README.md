@@ -38,6 +38,6 @@ hacking-rags/
   .env.example        Configuration sample
 ```
 
-Data sources use a title, owner, kind text header and a blank line before body. The server reloads local `.txt` files per query, chunks at 120 words with 20-word overlap, and caches embeddings in memory by content hash. The query is embedded and ranked by cosine similarity; top 3 chunks are retrieved. The chat API returns text, source, owner, chunk and score; these are not displayed in a separate UI panel. In lab 02 a toy reset action writes only a simulated event to a local `actions.log`. Labs intentionally expose evidence for educational inspection.
+Data sources use a title, owner, kind text header and a blank line before body. The server reloads local `.txt` files per query, chunks at 120 words with 20-word overlap, and caches embeddings in memory by content hash. The query is embedded and ranked by cosine similarity; top 3 chunks are retrieved. The chat API returns text, source, owner, chunk and score; these are not displayed in a separate UI panel. In lab 02 a toy reset action writes only a simulated event to a local `actions.log`. Labs intentionally expose evidence for educational inspection. For actual application security, enforce authorization independently of retrieved text and model claims; apply tenant/user ACLs before retrieval, separate authoritative from untrusted sources, scope tools, and restrict egress.
 
 Developed By [Maor Tal](https://www.linkedin.com/in/maor-tal-06a7ba2a/).

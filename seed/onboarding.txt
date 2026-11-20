@@ -1,0 +1,5 @@
+Title: Employee onboarding
+Owner: public
+Kind: kb
+
+New employees receive a laptop, corporate email, VPN access and MFA enrollment. The manager submits an onboarding request. IT installs endpoint protection and assigns least-privilege roles.

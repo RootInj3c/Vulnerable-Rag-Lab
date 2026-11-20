@@ -1,0 +1,5 @@
+Title: VPN incident report
+Owner: public
+Kind: ticket
+
+VPN connection troubleshooting: employees reported intermittent connectivity. Root cause investigation is pending; no official procedure has changed.

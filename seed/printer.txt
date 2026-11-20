@@ -1,0 +1,5 @@
+Title: Printer troubleshooting
+Owner: public
+Kind: kb
+
+For a printer issue, check the network connection, verify the print queue and restart the print spooler. Contact IT if the problem continues.

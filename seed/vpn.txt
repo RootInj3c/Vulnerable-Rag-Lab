@@ -1,0 +1,5 @@
+Title: VPN troubleshooting
+Owner: public
+Kind: kb
+
+VPN connection troubleshooting: verify internet connectivity, restart the corporate VPN client, check MFA and contact the service desk. Use the official corporate support portal. Never share credentials.
